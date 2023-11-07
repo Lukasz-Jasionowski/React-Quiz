@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import QuestionCard from './components/QuestionCard'
 import { Difficulty, fetchQuizQuestions, QuestionState } from './API';
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -48,7 +48,12 @@ const App = () => {
   }
 
   const nextQuestion = () => {
-
+    const nextQuestion = number + 1;
+    if (nextQuestion === TOTAL_QUESTIONS) {
+      setGameOver(true);
+    } else {
+      setNumber(nextQuestion);
+    }
   }
 
   return (
