@@ -52,6 +52,12 @@ h1 {
     margin: 20px;
 }
 
+@media screen and (max-width:767px){
+    h1 {
+        font-size: 2.4em;
+    }
+}
+
 .start, 
 .next {
     cursor: pointer;
